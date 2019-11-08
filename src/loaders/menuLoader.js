@@ -6,7 +6,9 @@ import { matrixes } from '../index.js';
 
 const menuLoader = () => {
   const task = document.getElementById('task');
-  task.remove();
+  if (task !== null) {
+    task.remove();
+  }
 
   const container = document.getElementById('multiply');
   container.innerHTML= '';
@@ -57,8 +59,8 @@ const menuLoader = () => {
   
   selectEl.onchange = function () {
     const value = selectEl.value;
-    matrixes[value] = staticMatrixes[value];
-    alert("Выбранная матрица:" + matrixes[value]);
+    matrixes["MatrixB"] = staticMatrixes[value];
+    alert("Выбранная матрица:" + matrixes["MatrixB"]);
   };
  
 
